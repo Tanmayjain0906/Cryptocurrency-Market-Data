@@ -54,7 +54,7 @@ function loadData(data) {
      
      <div id="percent">
        
-         <div class="per-btn" ${data[i].price_change_percentage_24h>0?`style="color:greenyellow; border: 1px solid greenyellow"`:`style="color:red; border: 1px solid red"`}>${data[i].price_change_percentage_24h} %</div>
+         <div class="per-btn" ${data[i].price_change_percentage_24h>0?`style="color:greenyellow;"`:`style="color:red; "`}>${data[i].price_change_percentage_24h} %</div>
      
      </div>
      
