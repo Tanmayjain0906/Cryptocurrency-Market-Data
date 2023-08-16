@@ -1,3 +1,7 @@
+
+
+
+
 let view = "grid";
 let gridButton = document.getElementById("grid");
 let listButton = document.getElementById("list");
@@ -44,7 +48,7 @@ function loadData(data) {
        </div>
        
        <div id="name">
-         ${data[i].symbol.toUpperCase()}
+       ${data[i].symbol.toUpperCase()}
          <div id="caption">
              ${data[i].name}
           </div>
@@ -153,3 +157,53 @@ function loadData(data) {
   }
 }
 
+
+let cards = document.getElementsByClassName("card");
+let moon = document.getElementsByClassName("fa-solid")[0];
+let viewMode = "dark";
+let h4 = document.getElementsByTagName("h4")[0];
+
+
+moon.addEventListener("click", ()=> {
+  if(viewMode === "dark")
+  {
+    moon.classList.remove("fa-moon");
+    moon.classList.add("fa-sun");
+    viewMode = "light";
+    moon.style.color = "black";
+    moon.style.transition = "0.5s";
+    document.body.style.backgroundColor = "white";
+    h4.style.color = "black";
+    gridButton.style.backgroundColor = "white";
+    listButton.style.backgroundColor = "white";
+    gridButton.style.color = "black";
+    listButton.style.color = "black";
+
+    for(let i=0;i<cards.length;i++)
+    {
+      cards[i].style.backgroundColor = "pink";
+    }
+    
+  }
+  else
+  {
+    moon.classList.add("fa-moon");
+    moon.classList.remove("fa-sun");
+    viewMode = "dark";
+    moon.style.color = "white";
+    moon.style.transition = "0.5s";
+    document.body.style.backgroundColor = "black";
+    h4.style.color = "white";
+
+    gridButton.style.backgroundColor = "black";
+    listButton.style.backgroundColor = "black";
+    gridButton.style.color = "white";
+    listButton.style.color = "white";
+    for(let i=0;i<cards.length;i++)
+    {
+      cards[i].style.backgroundColor = "#2b2a2a";
+    }
+    
+  }
+ 
+})
