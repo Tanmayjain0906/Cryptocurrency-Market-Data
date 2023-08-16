@@ -44,6 +44,9 @@ body {
 
 .card
 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: #2b2a2a;
     padding: 10px;
     margin-top: 30px;
@@ -91,7 +94,7 @@ body {
     gap: 10px;
     align-items: center;
     color: white;
-    margin-bottom: 15px;
+    margin-left: 10px;
     margin-top: 10px;
     
 }
@@ -111,27 +114,27 @@ body {
     padding-bottom: 5px;
     padding-left: 8px;
     padding-right: 8px;
-    width: 60px;
-    margin-bottom: 15px;
+    width: fit-content;
+    margin-left: 10px;
     text-align: center;
 }
 
 #price
 {
     color: greenyellow;
-    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
 #volume
 {
     color: gray;
-    margin-bottom: 15px;
+    margin-left: 10px;
 }
 
 #cap
 {
     color: gray;
-    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .fa-solid

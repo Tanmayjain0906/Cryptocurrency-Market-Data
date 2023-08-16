@@ -54,11 +54,11 @@ function loadData(data) {
      
      <div id="percent">
        
-         <div class="per-btn">${data[i].price_change_percentage_24h}</div>
+         <div class="per-btn" ${data[i].price_change_percentage_24h>0?`style="color:greenyellow; border: 1px solid greenyellow"`:`style="color:red; border: 1px solid red"`}>${data[i].price_change_percentage_24h} %</div>
      
      </div>
      
-     <div id="price">
+     <div id="price" ${data[i].current_price>0?`style: "color: greenyellow"`:`style: "color: red"`}>
      <i class="fa-solid fa-dollar-sign" style="color: #75E338;"></i>
      ${data[i].current_price}
         
@@ -76,8 +76,10 @@ function loadData(data) {
          Market Cap: <i class="fa-solid fa-dollar-sign" style="color: #7F7F71;"></i>${data[i].market_cap}
      
      </div>`
-
+      
+    
       container.appendChild(card);
+      
 
     }
   }
@@ -116,14 +118,14 @@ function loadData(data) {
 
     td1.colSpan = "2";
 
-      td2.innerHTML = `<div id="percent">
+      td2.innerHTML = `<div id="percent" ${data[i].price_change_percentage_24h>0?`style="color:greenyellow; border: 1px solid greenyellow"`:`style="color:red; border: 1px solid red"`}>
        
-    <div class="per-btn">${Math.ceil(data[i].price_change_percentage_24h)}</div>
+    <div class="per-btn">${data[i].price_change_percentage_24h}</div>
 
 </div>`
       td1.className = "td-1";
 
-      td3.innerHTML = ` <div id="price">
+      td3.innerHTML = ` <div id="price" ${data[i].current_price>0?`style: "color: greenyellow"`:`style: "color: red"`}>
       <i class="fa-solid fa-dollar-sign" style="color: #75E338;"></i>
       ${data[i].current_price}
          
