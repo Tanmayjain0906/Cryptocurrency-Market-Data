@@ -150,7 +150,7 @@ table{
     text-align: center;
     align-items: center;
     border-collapse: collapse;
-
+    border: none;
 }
 .table-head{
     color: white;
@@ -162,10 +162,14 @@ table>tr{
 
 tr{
     transition: all 0.5s;
+    
 }
 
 tr:hover{
    transform: scale(1.05);
+   background-color:#2b2a2a;
+   border-radius: 50px;
+   border: 2px solid rgba(255, 255, 255, 0.342);
    
 }
 

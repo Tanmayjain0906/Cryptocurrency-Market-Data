@@ -54,7 +54,7 @@ function loadData(data) {
      
      <div id="percent">
        
-         <div class="per-btn">${Math.ceil(data[i].price_change_percentage_24h)}</div>
+         <div class="per-btn">${data[i].price_change_percentage_24h}</div>
      
      </div>
      
